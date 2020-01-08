@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<hgroup>
+    <h2>@ViewBag.Title.</h2>
+</hgroup>
+
+<div>
+    <address>
+        G/F, Tin Hau Apple Mall,<br />
+        No. 14 King’s Road,<br />
+        Hong Kong<br /> 
+        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a>  (+852) 6011 5044</a><br />
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:dhks11@gmail.com">  dhks11@gmail.com</a><br />
+    </address>
+</div>
+
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Please drop us a line:</legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Your Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Your Email</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="textArea" class="col-lg-2 control-label">Message</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="select" class="col-lg-2 control-label">Your Ratings</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="select">
+                    <option>5 Stars: Excellent</option>
+                    <option>4 Stars: Very Good</option>
+                    <option>3 Stars: Good</option>
+                    <option>2 Stars: Fair</option>
+                    <option>1 Star: Poor</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

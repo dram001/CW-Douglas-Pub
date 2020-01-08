@@ -1,0 +1,59 @@
+﻿@model List<DougPub2.Models.Item>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <!--<span class="text-success"><h1>Douglas Pub</h1></span>
+    <p class="text-success">Our food is as good as the root beer.</p>
+        -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p><button type="button" class="btn btn-success btn-large" onclick="location.href='@Url.Action("Index", "Items")'">Order Now &rsaquo;</button></p>
+</div>
+
+<div id="Top Selling Items">
+</div>
+<h2><em>Top Selling Items</em></h2>
+<ul id="item-list">
+    @foreach (var items in Model)
+    {
+
+        <div class="col-md-3">
+            <a href="@Url.Action("Details", "Items",
+                new { id = items.ID })"><br />
+                <img width="265" height="160" alt="@items.Name" src="@items.ItemPictureUrl" /><br />
+                <span>@items.Name</span><br />
+            </a>
+        </div>
+
+    }
+</ul>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Our Location</h3>
+        <h4>
+            G/F, Tin Hau Apple Mall,<br />
+            No. 14 King’s Road,<br />
+            Hong Kong<br />
+        </h4>
+        <p><a class="btn btn-success" href="https://www.google.com/maps/search/Tin+Hau+Apple+Mall">See the map &rsaquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Opening Hours</h3>
+        <h4>Mon - Fri | 11am - 12am</h4>
+        <h4>Sat - Sun |  10am - 1am</h4>
+
+    </div>
+    <div class="col-md-4">
+        <h3>Reservation</h3>
+        <h4>Please contact us at:</h4>
+        <h4>Tel: 2511 1101</h4>
+    </div>
+</div>
