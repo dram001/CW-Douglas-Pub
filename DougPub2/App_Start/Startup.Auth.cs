@@ -2,7 +2,6 @@
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using DougPub2.Models;
 using Owin;
 using System;
@@ -44,20 +43,7 @@ namespace DougPub2 {
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
             //    clientSecret: "");
-
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
-
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
-
-            //app.UseGoogleAuthentication();
-            //Not working currently
-            GoogleAuthenticationOptions options = new GoogleAuthenticationOptions();
-            options.AuthenticationMode = Microsoft.Owin.Security.AuthenticationMode.Active;
-            app.UseGoogleAuthentication();
+            
         }
     }
 }
