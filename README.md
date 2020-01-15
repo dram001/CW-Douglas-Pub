@@ -16,7 +16,11 @@ Admin login
 
 Key Features:
 
-    1)
+  	1) Database is initialized for the first run of the application
+	2) Customers can place, review and modify foods and drinks order
+	3) Administrator can manage users, shop items and orders
+	4) Homepage will automatically shows top selling items for customers
+	5) RESTful API allow admin user to access and manipulate database items
 
 
 
