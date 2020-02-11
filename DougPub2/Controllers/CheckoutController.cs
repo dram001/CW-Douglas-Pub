@@ -18,13 +18,11 @@ namespace DougPub2.Controllers
         ApplicationDbContext storeDB = new ApplicationDbContext();
         AppConfigurations appConfig = new AppConfigurations();
 
-        public List<String> CreditCardTypes { get { return appConfig.CreditCardType;} }
 
         //
         // GET: /Checkout/AddressAndPayment
         public ActionResult AddressAndPayment()
         {
-            ViewBag.CreditCardTypes = CreditCardTypes;
             var previousOrder = storeDB.Orders.FirstOrDefault(x => x.Username == User.Identity.Name);
 
             if (previousOrder != null)
@@ -38,12 +36,9 @@ namespace DougPub2.Controllers
         [HttpPost]
         public async Task<ActionResult> AddressAndPayment(FormCollection values)
         {
-            ViewBag.CreditCardTypes = CreditCardTypes;
-            string result =  values[9];
             
             var order = new Order();
             TryUpdateModel(order);
-            order.CreditCard = result;
 
             try
             {
@@ -52,7 +47,7 @@ namespace DougPub2.Controllers
                     order.OrderDate = DateTime.Now;
                     var currentUserId = User.Identity.GetUserId();
 
-                    if (order.SaveInfo && !order.Username.Equals("guest@guest.com"))
+                    if (!order.Username.Equals("guest@guest.com"))
                     {
                         
                         var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
@@ -60,17 +55,10 @@ namespace DougPub2.Controllers
                         var ctx = store.Context;
                         var currentUser = manager.FindById(User.Identity.GetUserId());
 
-                        currentUser.Address = order.Address;
-                        currentUser.City = order.City;
-                        currentUser.Country = order.Country;
-                        currentUser.State = order.State;
-                        currentUser.Phone = order.Phone;
-                        currentUser.PostalCode = order.PostalCode;
+                        currentUser.TableNo = order.TableNo;
                         currentUser.FirstName = order.FirstName;
 
-                        //Save this back
-                        //http://stackoverflow.com/questions/20444022/updating-user-data-asp-net-identity
-                        //var result = await UserManager.UpdateAsync(currentUser);
+                       
                         await ctx.SaveChangesAsync();
 
                         await storeDB.SaveChangesAsync();

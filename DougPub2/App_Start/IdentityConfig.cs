@@ -201,7 +201,7 @@ namespace DougPub2.Models
         public static void InitializeIdentityForEF(ApplicationDbContext db) {
             var userManager = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var roleManager = HttpContext.Current.GetOwinContext().Get<ApplicationRoleManager>();
-            const string name = "admin@gmail.com";
+            const string name = "admin";
             const string guestName = "guest@guest.com";
             const string password = "Admin@123";
             const string guestPass = "Guest@1";

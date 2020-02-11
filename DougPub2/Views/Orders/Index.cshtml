@@ -11,16 +11,14 @@
 
 <div class="bs-docs-section">
     <div class="row">
-        @using (Html.BeginForm("Index", "Items", FormMethod.Get))
+        @using (Html.BeginForm("Index", "Orders", FormMethod.Get))
         {
 
             <div class="form-group">
                 <div class="input-group">
-                    <span class="input-group-addon">Find: </span>
-                    @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-                    <span class="input-group-btn">
+                    @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { style = "height: 37px;" })
                         <input type="submit" class="btn btn-info btn-sm" value="Search" />
-                    </span>
+                   
                 </div>
             </div>
         }
@@ -41,25 +39,7 @@
             Last Name
         </th>
         <th>
-            @Html.ActionLink("Order Total", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
-        </th>
-        <th>
-            Address
-        </th>
-        <th>
-            City
-        </th>
-        <th>
-            State
-        </th>
-        <th>
-            Postal Code
-        </th>
-        <th>
-            Country
-        </th>
-        <th>
-            Phone
+            Table No.
         </th>
         <th>
             Email
@@ -69,43 +49,25 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Total)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TableNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+        </td>
+    </tr>
     }
 
 </table>

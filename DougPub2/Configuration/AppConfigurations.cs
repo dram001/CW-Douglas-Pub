@@ -14,7 +14,6 @@ namespace DougPub2.Configuration
         string _domainForApiKey;
         string _fromName;
         string _fromEmail;
-        List<string> _creditCardtype;
 
         public string OrderEmail
         {
@@ -130,26 +129,6 @@ namespace DougPub2.Configuration
 
 
 
-        public List<string> CreditCardType
-        {
-            get
-            {
-                if ( (_creditCardtype != null) )
-                    return _creditCardtype;
-                else
-                {
-
-                    NameValueCollection appSettings =
-                       ConfigurationManager.AppSettings;
-
-                    _creditCardtype = appSettings["AcceptedCreditCardTypes"].Split(',').ToList();
-                    return _creditCardtype;
-                }
-            }
-            set
-            {
-                _creditCardtype = value;
-            }
-        }
+ 
     }
 }

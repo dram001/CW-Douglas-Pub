@@ -18,7 +18,6 @@ namespace DougPub2.Configuration
 
         String FromEmail { get; set; }
 
-        List<String> CreditCardType { get; set; }
 
     }
 }
