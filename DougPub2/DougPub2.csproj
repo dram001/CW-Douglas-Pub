@@ -193,7 +193,7 @@
     <Compile Include="Configuration\AppConfigurations.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AnalyticsController.cs" />
+    <Compile Include="Controllers\api\OrdersApiController.cs" />
     <Compile Include="Controllers\CatagoriesController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -270,10 +270,39 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Analytics.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Carts.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Catagorie.cs" />
+    <Compile Include="Models\Catagories.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClassDiagram.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassDiagram.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Items.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -292,8 +321,14 @@
     </Compile>
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderDetails.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orders.cs">
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Sales.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ClassDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -349,6 +384,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ClassDiagram.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClassDiagram.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ClassDiagram.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClassDiagram.edmx</DependentUpon>
+    </Content>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -371,6 +414,13 @@
     </EntityDeploy>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ClassDiagram.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClassDiagram.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ClassDiagram.edmx.diagram">
+      <DependentUpon>ClassDiagram.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\orderframework.pubxml" />
     <Content Include="Scripts\card.js" />

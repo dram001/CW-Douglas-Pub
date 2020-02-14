@@ -55,7 +55,7 @@ namespace DougPub2.Controllers
                     orders = orders.OrderByDescending(s => s.Total);
                     break;
                 default:  // Name ascending 
-                    orders = orders.OrderBy(s => s.FirstName);
+                    orders = orders.OrderBy(s => s.OrderId);
                     break;
             }
 
