@@ -7,7 +7,7 @@ GitHub repository link:
 https://github.com/dram001/CW-Douglas-Pub
 
 YouTube Demo Video (1080p):
-https://youtu.be/L6eIpiU0yxE
+https://youtu.be/JHUAI1vFS0k
 
 RESTful API Middleware for Items:
 https://localhost:44300/api/itemsapi
