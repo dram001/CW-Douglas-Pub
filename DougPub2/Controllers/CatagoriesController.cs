@@ -69,12 +69,12 @@ namespace DougPub2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Catagorie catagories = await db.Catagories.FindAsync(id);
-            if (catagories == null)
+            Catagorie catagorie = await db.Catagories.FindAsync(id);
+            if (catagorie == null)
             {
                 return HttpNotFound();
             }
-            return View(catagories);
+            return View(catagorie);
         }
 
         // POST: Catagories/Edit/5
@@ -82,15 +82,15 @@ namespace DougPub2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,Name")] Catagorie catagories)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,Name")] Catagorie catagorie)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(catagories).State = EntityState.Modified;
+                db.Entry(catagorie).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(catagories);
+            return View(catagorie);
         }
 
         // GET: Catagories/Delete/5
@@ -100,12 +100,12 @@ namespace DougPub2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Catagorie catagories = await db.Catagories.FindAsync(id);
-            if (catagories == null)
+            Catagorie catagorie = await db.Catagories.FindAsync(id);
+            if (catagorie == null)
             {
                 return HttpNotFound();
             }
-            return View(catagories);
+            return View(catagorie);
         }
 
         // POST: Catagories/Delete/5
@@ -113,8 +113,8 @@ namespace DougPub2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Catagorie catagories = await db.Catagories.FindAsync(id);
-            db.Catagories.Remove(catagories);
+            Catagorie catagorie = await db.Catagories.FindAsync(id);
+            db.Catagories.Remove(catagorie);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

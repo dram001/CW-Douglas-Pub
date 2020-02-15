@@ -193,6 +193,7 @@
     <Compile Include="Configuration\AppConfigurations.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnalyticsController.cs" />
     <Compile Include="Controllers\api\OrdersApiController.cs" />
     <Compile Include="Controllers\CatagoriesController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
@@ -210,6 +211,54 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405240343114_first.cs" />
+    <Compile Include="Migrations\201405240343114_first.Designer.cs">
+      <DependentUpon>201405240343114_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405240359521_currentv1.cs" />
+    <Compile Include="Migrations\201405240359521_currentv1.Designer.cs">
+      <DependentUpon>201405240359521_currentv1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405240404182_second.cs" />
+    <Compile Include="Migrations\201405240404182_second.Designer.cs">
+      <DependentUpon>201405240404182_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405281846276_vCurrent.cs" />
+    <Compile Include="Migrations\201405281846276_vCurrent.Designer.cs">
+      <DependentUpon>201405281846276_vCurrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301503445_v70.cs" />
+    <Compile Include="Migrations\201405301503445_v70.Designer.cs">
+      <DependentUpon>201405301503445_v70.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301511424_current.cs" />
+    <Compile Include="Migrations\201405301511424_current.Designer.cs">
+      <DependentUpon>201405301511424_current.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301617131_current1.cs" />
+    <Compile Include="Migrations\201405301617131_current1.Designer.cs">
+      <DependentUpon>201405301617131_current1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301706280_currentv19.cs" />
+    <Compile Include="Migrations\201405301706280_currentv19.Designer.cs">
+      <DependentUpon>201405301706280_currentv19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301731339_currentv89.cs" />
+    <Compile Include="Migrations\201405301731339_currentv89.Designer.cs">
+      <DependentUpon>201405301731339_currentv89.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405301842148_updatedentity.cs" />
+    <Compile Include="Migrations\201405301842148_updatedentity.Designer.cs">
+      <DependentUpon>201405301842148_updatedentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405311730073_data.cs" />
+    <Compile Include="Migrations\201405311730073_data.Designer.cs">
+      <DependentUpon>201405311730073_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406031742294_currentv88.cs" />
+    <Compile Include="Migrations\201406031742294_currentv88.Designer.cs">
+      <DependentUpon>201406031742294_currentv88.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201912241837261_Migration-1.cs" />
     <Compile Include="Migrations\201912241837261_Migration-1.Designer.cs">
       <DependentUpon>201912241837261_Migration-1.cs</DependentUpon>
@@ -222,39 +271,10 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\Analytics.cs" />
-    <Compile Include="Models\AspNetRoles.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserClaims.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserLogins.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUsers.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\Carts.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Catagorie.cs" />
-    <Compile Include="Models\Catagories.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ClassDiagram.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClassDiagram.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\Items.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -273,14 +293,8 @@
     </Compile>
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
-    <Compile Include="Models\OrderDetails.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Orders.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Sales.cs">
-      <DependentUpon>ClassDiagram.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -336,14 +350,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\ClassDiagram.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClassDiagram.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ClassDiagram.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClassDiagram.edmx</DependentUpon>
-    </Content>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -367,13 +373,6 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\ClassDiagram.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClassDiagram.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ClassDiagram.edmx.diagram">
-      <DependentUpon>ClassDiagram.edmx</DependentUpon>
-    </Content>
     <None Include="Properties\PublishProfiles\orderframework.pubxml" />
     <Content Include="Scripts\card.js" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
@@ -394,9 +393,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -481,6 +478,42 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201405240343114_first.resx">
+      <DependentUpon>201405240343114_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405240359521_currentv1.resx">
+      <DependentUpon>201405240359521_currentv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405240404182_second.resx">
+      <DependentUpon>201405240404182_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405281846276_vCurrent.resx">
+      <DependentUpon>201405281846276_vCurrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301503445_v70.resx">
+      <DependentUpon>201405301503445_v70.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301511424_current.resx">
+      <DependentUpon>201405301511424_current.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301617131_current1.resx">
+      <DependentUpon>201405301617131_current1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301706280_currentv19.resx">
+      <DependentUpon>201405301706280_currentv19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301731339_currentv89.resx">
+      <DependentUpon>201405301731339_currentv89.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405301842148_updatedentity.resx">
+      <DependentUpon>201405301842148_updatedentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405311730073_data.resx">
+      <DependentUpon>201405311730073_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406031742294_currentv88.resx">
+      <DependentUpon>201406031742294_currentv88.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912241837261_Migration-1.resx">
       <DependentUpon>201912241837261_Migration-1.cs</DependentUpon>
     </EmbeddedResource>
