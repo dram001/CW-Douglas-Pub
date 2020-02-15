@@ -67,19 +67,20 @@
             @using (Html.BeginForm("Index", "Items", FormMethod.Get))
             {
                 
-                <div class="form-group">
-                    <div class="input-group">
-                        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { style = "height: 37px;" })
-                        <input type="submit" class="btn btn-info btn-sm" value="Search" />
-                    </div>
-                </div>
+        <div class="form-group">
+            <div class="input-group">
+                <label for="SearchString">Search here: </label>
+                @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { style = "height: 37px;" })
+                <input type="submit" class="btn btn-info btn-sm" value="Search" />
+            </div>
+        </div>
             }
     </div>
 </div>
 <table class="table">
     <tr>
         <th>
-            @Html.ActionLink("Catagorie", "Index", new { sortOrder = ViewBag.CatagorieSortParm, currentFilter = ViewBag.CurrentFilter })
+            @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.CatagorieSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
             @Html.ActionLink("Item Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
